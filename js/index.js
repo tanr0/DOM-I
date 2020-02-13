@@ -77,6 +77,16 @@ sectionHeader[3].textContent = 'Product';
 sectionHeader[4].textContent = 'Vision'; 
 sectionHeader[5].textContent = 'Contact'; 
 
+Array.from(sectionHeader).forEach( title => {
+  title.style.color ='Cyan';
+  title.style.background = 'black';
+  title.style.borderRadius ='5px';
+  title.style.padding = '1% 2% 1% 2%';
+  title.style.width = 'fit-content'
+  title.style.boxShadow = "5px 3px cyan"
+})
+
+
 let sectionText = document.getElementsByTagName('p');
 console.log(sectionText)
 sectionText[0].textContent ='Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
@@ -106,3 +116,4 @@ newContent2.style.borderRadius ='5px'
 newContent2.style.padding = '1% 2% 1% 2%';
 let parent2 = document.querySelector('nav');
 parent2.appendChild(newContent2);
+

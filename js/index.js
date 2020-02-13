@@ -55,6 +55,13 @@ navArray[4].textContent = 'About';
 navArray[5].textContent = 'Contact'; 
 // console.log(navArray)
 
+Array.from(navArray).forEach(link => {
+  link.style.color ='Cyan';
+  link.style.background = 'black';
+  link.style.borderRadius ='5px';
+  link.style.padding = '1% 2% 1% 2%';
+})
+
 let ctaTextH1 = document.getElementsByTagName('h1');
 // console.log(ctaTextH1);
 ctaTextH1[0].innerHTML ='DOM<BR> IS<BR> AWESOME';
@@ -81,3 +88,21 @@ sectionText[5].innerHTML = '123 Way 456 Street<br> Somewhere, USA';
 sectionText[6].textContent = '1 (888) 888-8888';
 sectionText[7].textContent = 'sales@greatidea.io';
 sectionText[8].textContent = 'Copyright Great Idea! 2018';
+
+let newContent = document.createElement('a');
+newContent.textContent = 'Prepend'
+newContent.style.color ='Cyan';
+newContent.style.background = 'black';
+newContent.style.borderRadius ='5px'
+newContent.style.padding = '1% 2% 1% 2%';
+let parentElement = document.querySelector('nav');
+parentElement.prepend(newContent);
+
+let newContent2 = document.createElement('a');
+newContent2.textContent = 'appendChild';
+newContent2.style.color ='Cyan';
+newContent2.style.background = 'black';
+newContent2.style.borderRadius ='5px'
+newContent2.style.padding = '1% 2% 1% 2%';
+let parent2 = document.querySelector('nav');
+parent2.appendChild(newContent2);
